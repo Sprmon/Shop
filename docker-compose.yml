@@ -1,0 +1,23 @@
+services:
+
+  catalog-api:
+    build:
+      context: .
+      dockerfile: src/Catalog.API/Dockerfile
+    environment:
+      - ConnectionStrings__CatalogDB=Host=postgre;Port=5432;Database=CatalogDB;Username=postgres;Password=fugZwypczB94m0LP7CcH
+    ports:
+      - "60080:80"
+    depends_on:
+      - postgre
+
+  postgre:
+    image: postgres:14-alpine
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_DB: CatalogDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: fugZwypczB94m0LP7CcH
+    ports:
+      - "5432:1433"

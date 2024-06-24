@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3AF739CD-81D8-428D-A08A-0A58372DEBF6}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Packages.props = Directory.Packages.props
+    nuget.config = nuget.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F329EDA8-044F-4806-B0BD-52DC67FCA834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "src\Catalog.API\Catalog.API.csproj", "{104C7A35-0665-472B-B7A5-DB28D1274652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus", "src\EventBus\EventBus.csproj", "{1039AA05-818F-4786-89B6-14F109A44129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBusRabbitMQ", "src\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{35BA9EFB-63A4-40C4-8B61-1CE052361ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationEventLogEF", "src\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{7A86A502-3931-40F6-80BD-7D5DBC63D309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDefaults", "src\ServiceDefaults\ServiceDefaults.csproj", "{21935EF1-B270-4426-B857-83B895D9478D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.FunctionalTests", "tests\Catalog.FunctionalTests\Catalog.FunctionalTests.csproj", "{647957ED-6C88-49C6-97C6-875194E97886}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{104C7A35-0665-472B-B7A5-DB28D1274652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104C7A35-0665-472B-B7A5-DB28D1274652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104C7A35-0665-472B-B7A5-DB28D1274652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104C7A35-0665-472B-B7A5-DB28D1274652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1039AA05-818F-4786-89B6-14F109A44129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1039AA05-818F-4786-89B6-14F109A44129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1039AA05-818F-4786-89B6-14F109A44129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1039AA05-818F-4786-89B6-14F109A44129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BA9EFB-63A4-40C4-8B61-1CE052361ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BA9EFB-63A4-40C4-8B61-1CE052361ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BA9EFB-63A4-40C4-8B61-1CE052361ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BA9EFB-63A4-40C4-8B61-1CE052361ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A86A502-3931-40F6-80BD-7D5DBC63D309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A86A502-3931-40F6-80BD-7D5DBC63D309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A86A502-3931-40F6-80BD-7D5DBC63D309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A86A502-3931-40F6-80BD-7D5DBC63D309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21935EF1-B270-4426-B857-83B895D9478D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21935EF1-B270-4426-B857-83B895D9478D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21935EF1-B270-4426-B857-83B895D9478D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21935EF1-B270-4426-B857-83B895D9478D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647957ED-6C88-49C6-97C6-875194E97886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647957ED-6C88-49C6-97C6-875194E97886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647957ED-6C88-49C6-97C6-875194E97886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647957ED-6C88-49C6-97C6-875194E97886}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{104C7A35-0665-472B-B7A5-DB28D1274652} = {1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}
+		{1039AA05-818F-4786-89B6-14F109A44129} = {1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}
+		{35BA9EFB-63A4-40C4-8B61-1CE052361ECE} = {1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}
+		{7A86A502-3931-40F6-80BD-7D5DBC63D309} = {1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}
+		{21935EF1-B270-4426-B857-83B895D9478D} = {1D56C261-7EC5-4B7B-A3EF-FC2D6E79DB6E}
+		{647957ED-6C88-49C6-97C6-875194E97886} = {F329EDA8-044F-4806-B0BD-52DC67FCA834}
+	EndGlobalSection
+EndGlobal
