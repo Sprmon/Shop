@@ -35,22 +35,24 @@ internal static class MigrateDbContextExtensions
     var logger = scopeServices.GetRequiredService<ILogger<TContext>>();
     var context = scopeServices.GetService<TContext>();
 
+    // first run the migrations
+    if (context.Database.GetPendingMigrations().Any())
+    {
+      context.Database.Migrate();
+    }
+
     using var activity = ActivitySource.StartActivity($"Migration operation {typeof(TContext).Name}");
 
     try
     {
       logger.LogInformation("Migrating database associated with context {DbContextName}", typeof(TContext).Name);
-
       var strategy = context.Database.CreateExecutionStrategy();
-
       await strategy.ExecuteAsync(() => InvokeSeeder(seeder, context, scopeServices));
     }
     catch (Exception ex)
     {
       logger.LogError(ex, "An error occurred while migrating the database used on context {DbContextName}", typeof(TContext).Name);
-
       activity.SetExceptionTags(ex);
-
       throw;
     }
   }

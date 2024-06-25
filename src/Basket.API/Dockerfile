@@ -21,12 +21,12 @@ RUN dotnet workload restore
 RUN dotnet restore Sprmon.Shop.sln
 
 COPY . .
-WORKDIR /src/src/Catalog.API
-RUN dotnet publish Catalog.API.csproj --no-restore -c Release -o /app
+WORKDIR /src/src/Basket.API
+RUN dotnet publish Basket.API.csproj --no-restore -c Release -o /app
 
 FROM build AS publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Catalog.API.dll"]
+ENTRYPOINT ["dotnet", "Basket.API.dll"]

@@ -1,4 +1,3 @@
-global using Asp.Versioning;
 global using Asp.Versioning.Conventions;
 global using Sprmon.Shop.Catalog.API;
 global using Sprmon.Shop.Catalog.API.Infrastructure;

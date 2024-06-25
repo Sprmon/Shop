@@ -53,7 +53,7 @@ public sealed class CatalogApiFixture : WebApplicationFactory<Program>, IAsyncLi
     }
   }
 
-  public async Task  ()
+  public async Task InitializeAsync()
   {
     await _app.StartAsync();
     _postgresConnectionString = await Postgres.Resource.GetConnectionStringAsync();

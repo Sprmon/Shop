@@ -1,0 +1,11 @@
+global using System.ComponentModel.DataAnnotations;
+global using System.Security.Claims;
+global using System.Text.Json;
+global using Grpc.Core;
+global using Microsoft.AspNetCore.Authorization;
+global using Sprmon.Shop.Basket.API.Extensions;
+global using Sprmon.Shop.Basket.API.Grpc;
+global using Sprmon.Shop.EventBus.Abstractions;
+global using Sprmon.Shop.EventBus.Events;
+global using Sprmon.Shop.ServiceDefaults;
+global using StackExchange.Redis;

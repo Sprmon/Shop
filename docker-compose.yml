@@ -1,17 +1,37 @@
 services:
 
+  basket-api:
+    build:
+      context: .
+      dockerfile: src/Basket.API/Dockerfile
+    environment:
+      - ConnectionString=-basket-data
+      - ConnectionStrings__EventBus=amqp://guest:guest@rabbitmq
+    ports:
+      - "8082:8080"
+    depends_on:
+      - basket-data
+      - rabbitmq
+
+  basket-data:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
   catalog-api:
     build:
       context: .
       dockerfile: src/Catalog.API/Dockerfile
     environment:
-      - ConnectionStrings__CatalogDB=Host=postgre;Port=5432;Database=CatalogDB;Username=postgres;Password=fugZwypczB94m0LP7CcH
+      - ConnectionStrings__CatalogDB=Host=catalog-data;Port=5432;Database=CatalogDB;Username=postgres;Password=fugZwypczB94m0LP7CcH
+      - ConnectionStrings__EventBus=amqp://guest:guest@rabbitmq
     ports:
       - "8081:8080"
     depends_on:
-      - postgre
+      - catalog-data
+      - rabbitmq
 
-  postgre:
+  catalog-data:
     image: pgvector/pgvector:pg16
     restart: always
     shm_size: 128mb
@@ -21,3 +41,9 @@ services:
       POSTGRES_PASSWORD: fugZwypczB94m0LP7CcH
     ports:
       - "5432:1433"
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"

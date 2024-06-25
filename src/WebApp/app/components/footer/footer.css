@@ -1,0 +1,39 @@
+footer {
+  margin-top: 3.5rem;
+  background-color: #000;
+  width: 100%;
+
+  .footer-row {
+    padding: 3.5rem 10rem;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  svg {
+    color: white;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+  }
+
+  .footer-content {
+    margin-top: 3.5rem;
+    background-color: #000;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  footer .footer-row {
+    padding: 3.5rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  footer .footer-row {
+    padding: 3.5rem 3rem;
+  }
+}
