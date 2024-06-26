@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./layout.scss";
 import { Footer } from "./components/footer/footer";
+import { Header } from "./components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +20,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container">
+        <Header isCatalog={false} />
+        <main className="container">
           {children}
-        </div>
+        </main>
         <Footer />
+
+        <div className="error-ui">
+          An unhandled error has occurred.
+          <a href="" className="reload">Reload</a>
+          <a className="dismiss">🗙</a>
+        </div>
       </body>
     </html>
   );

@@ -1,0 +1,151 @@
+.header {
+  position: relative;
+  max-width: 120rem;
+  margin: auto;
+}
+
+.header.home .header-container {
+  height: 38rem;
+  margin-bottom: 0;
+}
+
+.header .header-container {
+  height: 15rem;
+  margin-bottom: 4rem;
+}
+
+.header-hero {
+  overflow: hidden;
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.header-container {
+  position: relative;
+  margin: auto;
+  margin: 0 10rem;
+}
+
+.header-intro {
+  position: absolute;
+  max-width: 48rem;
+  bottom: 3rem;
+  white-space: nowrap;
+}
+
+.header-intro h1 {
+  color: #000;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0;
+}
+
+.header-intro p {
+  color: #000;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  margin: 0;
+}
+
+.header .logo-header {
+  color: black;
+  margin-right: auto;
+  width: 20vw;
+  height: auto;
+  max-width: 250px;
+  min-width: 100px;
+}
+
+.header-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.25rem;
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) { 
+  .header-hero {
+      height: 18rem;
+  }
+
+  .header-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+
+  .header .header-container {
+      height: 15rem;
+      margin-bottom: 4rem;
+  }
+
+  .header-container {
+      margin: 0 1rem;
+  }
+
+  .header.home .header-container {
+      height: 18rem;
+      margin: 0 1rem;
+  }
+
+  .header-intro {
+      white-space: wrap;
+      bottom: 0;
+  }
+
+  .header-intro h1 {
+      font-size: 2rem;
+  }
+  
+  .header-intro p {
+      font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) { 
+  .header.home .header-hero {
+      height: 24rem;
+  }
+
+  .header .header-hero {
+      height: 15rem;
+  }
+
+  .header-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+
+  .header-container {
+      margin: 0 1rem;
+      margin: 0 3rem;
+  }
+
+  .header.home .header-container {
+      height: 24rem;
+      margin: 0 3rem;
+  }
+
+  .header-intro {
+      white-space: wrap;
+  }
+
+  .header-intro h1 {
+      font-size: 2rem;
+  }
+  
+  .header-intro p {
+      font-size: 1.5rem;
+  }
+}
