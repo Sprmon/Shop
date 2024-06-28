@@ -14,7 +14,8 @@ export type CatalogItem = {
   name: string;
   description: string;
   price: number;
-  pictureUrl: string;
+  pictureUri: string;
+  pictureFileName: string;
   catalogBrandId: number;
   catalogBrand: CatalogBrand;
   catalogTypeId: number;

@@ -4,7 +4,7 @@
   margin: auto;
 }
 
-.header.home .header-container {
+.header.catalog .header-container {
   height: 38rem;
   margin-bottom: 0;
 }
@@ -60,6 +60,13 @@
   height: auto;
   max-width: 250px;
   min-width: 100px;
+
+  svg {
+    width: 20vw;
+    height: auto;
+    max-width: 250px;
+    max-height: 100px;
+  }
 }
 
 .header-navbar {
@@ -92,7 +99,7 @@
       margin: 0 1rem;
   }
 
-  .header.home .header-container {
+  .header.catalog .header-container {
       height: 18rem;
       margin: 0 1rem;
   }
@@ -112,7 +119,7 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) { 
-  .header.home .header-hero {
+  .header.catalog .header-hero {
       height: 24rem;
   }
 
@@ -132,7 +139,7 @@
       margin: 0 3rem;
   }
 
-  .header.home .header-container {
+  .header.catalog .header-container {
       height: 24rem;
       margin: 0 3rem;
   }
